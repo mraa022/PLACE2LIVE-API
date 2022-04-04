@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping(path="/API")
@@ -30,7 +31,7 @@ public class ApiController {
     @PostMapping(value = "/createUser",consumes = {"application/json"})
     public @ResponseBody
     int createUser(@RequestBody User user){
-
+        System.out.println(userRepository.findById(user.getUserId()));
         if(userRepository.findById(user.getUserId()).equals(Optional.empty())){
             System.out.println(user);
             userRepository.save(user);
@@ -56,6 +57,9 @@ public class ApiController {
     @PostMapping("/createPost")
     public @ResponseBody
     int createPost(@RequestBody Post post){
+        if (userRepository.findById(post.getPosterId()).orElse(null)==null){
+            return 0;
+        }
         postRepository.save(post);
         return 1;
     }
