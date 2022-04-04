@@ -1,6 +1,6 @@
 # PLACE2LIVE API 
 
-## URL endpoints
+## API endpoints
 
 
 #### URL 1
