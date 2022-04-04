@@ -31,7 +31,7 @@ public class ApiController {
     public @ResponseBody
     int createUser(@RequestBody User user){
 
-        if(userRepository.findById(user.getUserId()).isEmpty()){
+        if(userRepository.findById(user.getUserId()).equals(Optional.empty())){
             System.out.println(user);
             userRepository.save(user);
             return 1;
