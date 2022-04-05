@@ -1,17 +1,36 @@
 # PLACE2LIVE API 
-##### this is the backed API. It provides an easy to use interface to the frontend to do CRUD operations and other things on the database. Due to time constraints it's not hosted so to run it, it must be downloaded and ran in a local server. 
+This is API for the back-end. It provides an easy-to-use interface for the frontend to do CRUD operations and other actions with the database. Due to time constraints, it is hosted locally so it must be downloaded and ran in a local server. 
 
-## How to run it
-##### Download the github code, unzip it and open the project in IntelliJ (chosen because it will handle all the dependecies). It will tell you what needs to be downloaded, so just follow those instructions. Then, open the terminal, navigate to your mysql and run this to create a database.
+
+
+# How to Run:
+##### Download the github code, unzip it and open the project in IntelliJ (Will handle and take care of all the dependencies). It will tell you what needs to be downloaded. Afterwards, open the terminal, navigate to your mysql and run the code below to create a database:
     create database cp317-db;
     create user 'springuser'@'%' identified by 'ThePassword';
     grant all on cp317-db.* to 'springuser'@'%';
-##### then run the java application and use Postman to do POST/GET requests
+##### Now, run the Java application and use Postman to do POST/GET requests
 
-## Constraints
+
+
+# Constraints
 ##### The only endpoints implemeneted are the following, and due to time constraints the login/create user functions are not secure (passwords are stored as plain Strings).
 
-## API endpoints
+
+
+# **Dependencies**
+The frontend of PLACE2LIVE relies on the following dependencies:
+- IntelliJ
+- PostMan
+- MySQL (Version 6 or higher)
+-  MySQL Driver
+- JDK (Was Tested on Version 11 and 14)
+- Maven 3.2
+- Spring Web
+- SPring Data JPA
+
+
+
+# API endpoints
 
 
 #### URL 1
