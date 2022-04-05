@@ -1,4 +1,15 @@
 # PLACE2LIVE API 
+##### this is the backed API. It provides an easy to use interface to the frontend to do CRUD operations and other things on the database. Due to time constraints it's not hosted so to run it, it must be downloaded and ran in a local server. 
+
+## How to run it
+##### Download the github code, unzip it and open the project in IntelliJ (chosen because it will handle all the dependecies). It will tell you what needs to be downloaded, so just follow those instructions. Then, open the terminal, navigate to your mysql and run this to create a database.
+    create database cp317-db;
+    create user 'springuser'@'%' identified by 'ThePassword';
+    grant all on cp317-db.* to 'springuser'@'%';
+##### then run the java application.
+
+## Constraints
+##### The only endpoints implemeneted are the following, and due to time constraints the login/create user functions are not secure (passwords are stored as plain Strings).
 
 ## API endpoints
 
