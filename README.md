@@ -6,7 +6,7 @@
     create database cp317-db;
     create user 'springuser'@'%' identified by 'ThePassword';
     grant all on cp317-db.* to 'springuser'@'%';
-##### then run the java application.
+##### then run the java application and use Postman to do POST/GET requests
 
 ## Constraints
 ##### The only endpoints implemeneted are the following, and due to time constraints the login/create user functions are not secure (passwords are stored as plain Strings).
